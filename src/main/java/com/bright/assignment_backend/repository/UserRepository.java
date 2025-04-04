@@ -1,4 +1,8 @@
 package com.bright.assignment_backend.repository;
 
-public class UserRepository {
+import com.bright.assignment_backend.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<String, User> {
+
 }
