@@ -2,7 +2,11 @@ package com.bright.assignment_backend.repository;
 
 import com.bright.assignment_backend.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepository extends JpaRepository< User,String> {
+import java.util.Optional;
 
+@Repository
+public interface UserRepository extends JpaRepository< User,Long> {
+    Optional<User> findByEmail(String email);
 }

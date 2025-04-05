@@ -1,26 +1,55 @@
 package com.bright.assignment_backend.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.Accessors;
 
-@Accessors(chain = true)
+import java.util.Collection;
+
+@Entity
+@Table(name = "users")
 @Data
 @NoArgsConstructor
-//@ToString(exclude = {"password"})
-@Entity
-@Table(name = "user")
+@Accessors(chain = true)
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long userId;
     @Column(name = "name")
     private String name;
-    @Column(name = "email")
+
+    @Column(name = "email", unique = true)
     private String email;
+
     @Column(name = "password")
     private String password;
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
 }
+
