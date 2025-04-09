@@ -11,6 +11,9 @@ services:
       - DATABASE_URL=jdbc:postgresql://java_db:5432/postgres
       - DATABASE_USERNAME=myuser
       - DATABASE_PASSWORD=mypassword
+      - JWT_SECRET=auth-spring-jwt-secret-key-dephtfirst-i-hope-it-long-enough-to-match-512-uh-it-still-not-finally
+      - JWT_EXPIRATION_MS=86400000 # 1 day
+
     depends_on:
       - java_db
 
