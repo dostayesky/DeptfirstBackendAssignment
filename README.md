@@ -15,5 +15,7 @@ internship assignment
 | POST | `/logout` | logout and remove JWT |
 
 ## 🧪 Test API
-import postman_collection.json to Postman
 
+📥 Import [Postman Collection](postman_collection.json) into Postman for quick testing.
+
+> Includes preconfigured requests for login, register, profile, and logout.
