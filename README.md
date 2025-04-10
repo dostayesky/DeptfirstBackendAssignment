@@ -16,6 +16,12 @@ internship assignment
 
 ## 🧪 Test API
 
-📥 Import [Postman Collection](postman_collection.json) into Postman for quick testing.
+📥 Import [Postman Collection](postman_collection.json) into Postman for quick testing. \
 
-> Includes preconfigured requests for login, register, profile, and logout.
+> ⚠️ Be sure to **create or select an environment** before testing.
+
+The collection includes preconfigured requests for: 
+* Register
+* Login
+* Get Profile
+* Logout
