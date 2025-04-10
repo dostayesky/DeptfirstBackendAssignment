@@ -35,7 +35,7 @@ public class AuthTokenFilter extends OncePerRequestFilter{
             throws ServletException, IOException {
 
         List<String> publicEndpoints = List.of("/login", "/register","/logout");
-        System.out.println(request.getRequestURI());
+
         if (publicEndpoints.contains(request.getRequestURI())) {
             filterChain.doFilter(request, response);
             return;

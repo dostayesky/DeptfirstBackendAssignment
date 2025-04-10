@@ -45,7 +45,6 @@ public class UserImpl implements UserService {
             return res.setSuccess(false).setMessage("Email not exist");
         }
         if(!encoder.matches(req.getPassword(),user.getPassword())){
-
             return res.setSuccess(false).setMessage("Password incorrect");
         }
         String jwt = jwtUtil.generateJwtToken(req.getEmail());
