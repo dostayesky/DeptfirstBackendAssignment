@@ -1,7 +1,7 @@
-# DeptfirstBackendAssignment
+# DepthfirstBackendAssignment
 internship assignment
 
-## 🚀 Run Sever (Docker)
+## 🚀 Run Server (Docker)
 ```bash
  docker-compose up -d
 ```
